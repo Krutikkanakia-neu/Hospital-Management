@@ -9,9 +9,11 @@ Members:
 3.Ikra Bagwan - 002794307 
 
 Project Description
+
 An integrated system comprising numerous entities makes up the hospital management system. The management of all these elements would be difficult. We are therefore creating a single database for hospitals to address this issue and improve system efficiency by maintaining all the information needed to administer hospitals. Additionally, with the aid of this project, we will use visualization tools to exhibit and convey the data for prevalent trends for the breakouts. This would make it easier to comprehend analytics based on data or information collected from several hospitals.
 
 SCOPE
+
 • Administration/On-Boarding — 
 o	The hospital administrator will have access to this application's administrative functions.
 o	The admin can add onboarding for various personas, including Patients, Doctors, and Nurses.
