@@ -1,0 +1,319 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# # Extracting Images and Textual Information From Twitter
+# 
+
+# ## Introduction
+# 
+# Here we are using twitter API to extract tweets related with brands of our interest and also we are getting the images associated with the tweet. Every tweet is then passed through google's sentimental analysis API and tweet is classified into positive, negative or neutral. Images are passed through object localization and CNN model to identify logos present in the image. All this information is then collected and visualized in tableau (data visualization tool). 
+
+# ## Importing Essential Libraries
+
+# In[3]:
+
+
+import tweepy #Library required for Twitter API
+import csv, re
+import pandas as pd
+import os
+import wget
+import logging
+
+
+# ### Authentication keys
+# 
+# Here we are defining keys to authenticate with twitter API and start calling API functions to extract tweets for our analysis.   
+# 
+# You need to register for a Twitter dev account https://developer.twitter.com     
+# 
+# Look at the Twitter data model https://developer.twitter.com/en/docs/twitter-api/v1/data-dictionary/object-model/tweet
+# 
+# Apply for a Twitter Developer Account
+# 
+# Go to the Twitter developer site to apply for a developer account.
+# 
+# Step 2: Create an Application
+# 
+# Twitter grants authentication credentials to apps, not accounts. An app can be any tool or bot that uses the Twitter API. So you need to register your an app to be able to make API calls.
+# 
+# To register your app, go to your Twitter apps page and select the Create an app option.
+# 
+# You need to provide the following information about your app and its purpose:
+# 
+# App name: a name to identify your application (such as examplebot)
+# Application description: the purpose of your application (such as An example bot for a Real Python article)
+# Your or your application’s website URL: required, but can be your personal site’s URL since bots don’t need a URL to work
+# Use of the app: how users will use your app (such as This app is a bot that will automatically respond to users)
+# Step 3: Create the Authentication Credentials
+# 
+# To create the authentication credentials, go to your Twitter apps page. Here’s what the Apps page looks like:
+# 
+# Edit app details
+# Here you’ll find the Details button of your app. Clicking this button takes you to the next page, where you can generate the credentials.
+# 
+# By selecting the Keys and tokens tab, you can generate and copy the key, token, and secrets to use them in your code:
+# 
+# Generate keys and tokens
+# After generating the credentials, save them to later use them in your code.
+# 
+# 
+# 
+# 
+
+# In[4]:
+
+
+consumer_key = "mosGD9xVYs8hYRSOq4AUHLEdU"
+consumer_secret = "V8ATXooVAZvY0G5G7pfVMU0zOFBr3MhM3idpRBR4TyEoYNmyfL"
+access_key = "1590063043223822336-Y68X0ejxMijA3dbKWJuT0CENbzN6FP"
+access_secret = "q7eaRsi0nRyDfNJLCKLon0ICwfP3wIpLAoNnhMvPjF3AK"
+
+
+# In[5]:
+
+
+#Creating an empty dataframe to store the information
+tweets =pd.DataFrame(columns=["id","id_str","screen_name","name","description"])
+
+
+# In[6]:
+
+
+tweets.columns
+
+
+# ### Extracting Tweets
+# 
+# We are using tweepy.cursor method to get all the tweets hashtagged with 'dunkin-donuts', also we are only using the tweets that have an image posted along with it. Since images are core part of our application.
+
+# In[7]:
+
+
+import datetime, time
+last_week = datetime.date.today() - datetime.timedelta(9)
+since_tweets = datetime.datetime.strptime(time.strftime("%Y-%m-%d"), "%Y-%m-%d")
+print (since_tweets)
+
+
+# As we have previously seen, the Twitter API requires that all requests use OAuth to authenticate. So you need to create the required authentication credentials to be able to use the API. These credentials are four text strings:
+# 
+# Consumer key
+# Consumer secret
+# Access token
+# Access secret
+
+# In[8]:
+
+
+auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
+auth.set_access_token(access_key, access_secret)
+api = tweepy.API(auth,wait_on_rate_limit=True)
+
+try:
+    api.verify_credentials()
+    print("Authentication OK")
+except:
+    print("Error during authentication")
+
+
+# In[9]:
+
+
+timeline = api.home_timeline()
+for tweet in timeline:
+    print(f"{tweet.user.name} said {tweet.text}")
+
+
+# In[10]:
+
+
+user = api.get_user(screen_name="AishuVenkat22")
+print("Most recent tweet: " + user.status.text)
+
+
+# In[11]:
+
+
+print("User details:")
+print(user.name)
+print(user.description)
+print(user.location)
+
+print("Last 20 Followers:")
+for follower in user.followers():
+    print(follower.name)
+
+
+# In[12]:
+
+
+import datetime, time
+now = datetime.date.today()
+date_since = datetime.datetime.strptime(time.strftime("%Y-%m-%d"), "%Y-%m-%d")
+print (date_since)
+keywords=['data', 'science']
+print (' '.join(keywords))
+num_tweets=30
+print ("num_tweets ", num_tweets)
+
+
+# In[11]:
+
+
+new_search = "kim+kardashian -filter:retweets"
+
+
+# In[13]:
+
+
+# https://developer.twitter.com/en/docs/twitter-api/v1/tweets/search/api-reference/get-search-tweets
+# https://docs.tweepy.org/en/stable/api.html#search-tweets
+tweets = tweepy.Cursor(api.search_tweets,
+              q="#datascience",
+              lang="en",
+              until=date_since).items(num_tweets)
+
+
+# In[14]:
+
+
+cnt=0
+tweets_data = [] #initialize master list to hold our ready tweets
+for tweet in tweets:
+    print(cnt)    
+    print(tweet)
+    cnt=cnt+1
+
+
+# In[15]:
+
+
+# https://developer.twitter.com/en/docs/twitter-api/v1/tweets/search/api-reference/get-search-tweets
+# https://docs.tweepy.org/en/stable/api.html#search-tweets
+tweets = tweepy.Cursor(api.search_tweets,
+              q="#datascience",
+              lang="en",
+              until=date_since).items(num_tweets)
+
+
+# In[16]:
+
+
+tweets
+
+
+# In[17]:
+
+
+cnt=0
+tweets_data = [] #initialize master list to hold our ready tweets
+for tweet in tweets:
+    print(cnt)    
+    tweets_data.append([tweet.id,tweet.id_str,tweet.user.name,tweet.text.encode("utf-8"),tweet.user.description])    
+    cnt=cnt+1
+
+
+# In[18]:
+
+
+tweets_data
+
+
+# ## The following dataframe has been made with all the information related to #DunkinDonuts
+
+# In[19]:
+
+
+tweets_df = pd.DataFrame(tweets_data,columns = ["id","id_str","screen_name","name","description"])
+tweets_df
+
+
+# ## Appending the sentiment score to the exisiting dataframe and writing to a CSV File. Downloading images to a particular folder.
+
+# In[20]:
+
+
+tweets_df.head()
+
+
+# In[21]:
+
+
+outfile=re.sub(r"\s+", '_', "twitter_user_table_scrapedfile_to_db")
+outfile=outfile+'.csv'
+print(outfile)
+tweets_df.to_csv(outfile, sep=',', encoding='utf-8')
+
+
+# In[22]:
+
+
+pip install mysql-connector-python
+
+
+# In[23]:
+
+
+pip install pandas
+
+
+# In[24]:
+
+
+import mysql.connector as msql
+from mysql.connector import Error
+try:
+    conn = msql.connect(host='localhost', user='root',  
+                        password='aishu$V22pwd')#give ur username, password
+    if conn.is_connected():
+        cursor = conn.cursor()
+        cursor.execute("CREATE DATABASE employeetest")
+        print("Database is created")
+except Error as e:
+    print("Error while connecting to MySQL", e)
+
+
+# In[25]:
+
+
+import pandas as pd
+tweetsdata = pd.read_csv('/Users/aishwaryavenkatesan/Desktop/Kim_dunkin/twitter_user_table_scraped copy.csv', index_col=False, delimiter = ',')
+tweetsdata.head()
+
+
+# In[36]:
+
+
+import mysql.connector as mysql
+from mysql.connector import Error
+try:
+    conn = mysql.connect(host='localhost', database='DataScience_Curriculum', user='root', password='aishu$V22pwd')
+    if conn.is_connected():
+        cursor = conn.cursor()
+        cursor.execute("select database();")
+        record = cursor.fetchone()
+        print("You're connected to database: ", record)
+        cursor.execute('DROP TABLE IF EXISTS twitter_data;')
+        print('Creating table....')
+# in the below line please pass the create table statement which you want #to create
+        cursor.execute("CREATE TABLE twitter_data(s_no int,id varchar(255),id_str varchar(255),screen_name varchar(255),name varchar(255),description varchar(255))")
+        print("Table is created....")
+        #loop through the data frame
+        for i,row in tweetsdata.iterrows():
+            #here %S means string values 
+            sql = "INSERT INTO DataScience_Curriculum.twitter_data VALUES (%s,%s,%s,%s,%s,%s)"
+            print(row)
+            cursor.execute(sql, tuple(row))
+            print("Record inserted")
+            # the connection is not auto committed by default, so we must commit to save our changes
+            conn.commit()
+except Error as e:
+            print("Error while connecting to MySQL", e)
+
+
+# In[ ]:
+
+
+
+

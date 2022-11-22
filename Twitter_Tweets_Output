@@ -1,0 +1,333 @@
+Out[4]:
+Index(['Id', 'Screen_Name', 'Text', 'Created at'], dtype='object')
+
+# execution date is printed
+
+Out[5]:2022-11-12 00:00:00
+
+# Authetication is Checked
+    
+Out[6]:Authentication OK
+
+# print date, joined keywords and number of tweets we want  to print
+Out[7]: 2022-11-12 00:00:00
+hospital doctor
+num_tweets  30
+
+Out[9]: <tweepy.cursor.ItemIterator at 0x24759a2c640>
+
+#print counts
+Out[10]:0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+
+#print tweets data
+Out[11]:[['EuropeanCancer',
+  'European Cancer Organisation',
+  'Raising awareness to improve prevention, diagnosis, treatment and care of cancer patients. Organiser of #EuropeanCancerSummit',
+  19770,
+  False],
+ ['SewantiLimaye',
+  'Sewanti Limaye 🇮🇳🇺🇸',
+  'Director Medical&Precision Oncology #precisiononcology #liquidbx #hnc #LCSM @DanaFarber @ColumbiaMed @JIPOEditors @IylonOncology @rfhospital #IMPACTIndia',
+  1797,
+  False],
+ ['ThatPhysioAbu',
+  'Abu Sidhanee',
+  "Specialist Children's Physiotherapist \nPart of the Paediatrics & TCT service @UCLH | @CCLG | @WorldSIOP | @CancerPOINTE | @IPTHOPE 🎗️",
+  938,
+  False],
+ ['robertomanchon3', 'roberto manchon', '', 29, False],
+ ['LGCW2022',
+  'London Global Cancer Week',
+  'Highlighting the UK’s significant global contribution to strengthening capacity in cancer prevention and treatment in less well-resourced regions',
+  799,
+  False],
+ ['GlopesMd',
+  'gilberto lopes',
+  'Chief MedOnc @SylvesterCancer. Helping improve Cancer Control in LMICs. Editor-in-Chief @JCOGO_ASCO, Board Member @UICC - co-chair #ATOMcoalition',
+  37627,
+  False],
+ ['EuropeanCancer',
+  'European Cancer Organisation',
+  'Raising awareness to improve prevention, diagnosis, treatment and care of cancer patients. Organiser of #EuropeanCancerSummit',
+  19770,
+  False],
+ ['DanaFarber_CGCM',
+  'Dana-Farber Center for Global Cancer Medicine',
+  'The Center for Global Cancer Medicine (CGCM) strives to reduce the global cancer burden and promote health equity in resource-limited settings. #GlobalOncology',
+  393,
+  False],
+ ['LGCW2022',
+  'London Global Cancer Week',
+  'Highlighting the UK’s significant global contribution to strengthening capacity in cancer prevention and treatment in less well-resourced regions',
+  799,
+  False],
+ ['ThatPhysioAbu',
+  'Abu Sidhanee',
+  "Specialist Children's Physiotherapist \nPart of the Paediatrics & TCT service @UCLH | @CCLG | @WorldSIOP | @CancerPOINTE | @IPTHOPE 🎗️",
+  938,
+  False],
+ ['gchantada', 'Guillermo Chantada', 'Pediatric Oncologist', 1154, False],
+ ['LGCW2022',
+  'London Global Cancer Week',
+  'Highlighting the UK’s significant global contribution to strengthening capacity in cancer prevention and treatment in less well-resourced regions',
+  799,
+  False],
+ ['ABCGlobalAll',
+  'ABC Global Alliance',
+  'Improving and extending the lives of women and men living with advanced breast cancer (ABC) in all countries worldwide and fighting for a cure.',
+  1005,
+  False],
+ ['marialcors',
+  'Angela Lopez-Cortes',
+  '🇨🇴 living in 🇬🇧 • MD Epidemiology Public Health Global Health & Development • Research Fellow @Benchista @UCLchildhealth • Clinical trials @greatormondSt',
+  49,
+  False],
+ ['LungConnectIN',
+  'Lung Connect India',
+  'Lung Connect is a community for patients and caregivers of Lung Cancer.',
+  152,
+  False],
+ ['ThatPhysioAbu',
+  'Abu Sidhanee',
+  "Specialist Children's Physiotherapist \nPart of the Paediatrics & TCT service @UCLH | @CCLG | @WorldSIOP | @CancerPOINTE | @IPTHOPE 🎗️",
+  938,
+  False],
+ ['SusannahStanwa1',
+  'Susannah Stanway',
+  'Medical oncologist; cancer control in LMICs; London Global Cancer Week. UK Global Cancer Network. All views my own.',
+  756,
+  False],
+ ['SusannahStanwa1',
+  'Susannah Stanway',
+  'Medical oncologist; cancer control in LMICs; London Global Cancer Week. UK Global Cancer Network. All views my own.',
+  756,
+  False],
+ ['ThatPhysioAbu',
+  'Abu Sidhanee',
+  "Specialist Children's Physiotherapist \nPart of the Paediatrics & TCT service @UCLH | @CCLG | @WorldSIOP | @CancerPOINTE | @IPTHOPE 🎗️",
+  938,
+  False],
+ ['pii1240',
+  'Pia, childhood cancer PT',
+  'Kinesióloga, nerd, deportista, lesionada, wataca, #Englishlover',
+  790,
+  False],
+ ['PallChase',
+  'Palliative Care in Humanitarian Aid Situations',
+  'We believe in the humanity of each person and work together with those affected by humanitarian settings have the palliative care they need and deserve',
+  269,
+  False],
+ ['DorcasCancer',
+  'The Dorcas Cancer Foundation',
+  'Non-profit organization dedicated to improving childhood cancer outcomes in Nigeria.',
+  1131,
+  False],
+ ['Alamandamal',
+  'برنامج ألم وأمل',
+  '\u200f\u200fبرنامج ألم وأمل كل يوم جمعة الساعة 10 مساء على إذاعة وتلفزيون الشارقة WhatsApp 0501637000 -الم وامل',
+  5133,
+  False],
+ ['LGCW2022',
+  'London Global Cancer Week',
+  'Highlighting the UK’s significant global contribution to strengthening capacity in cancer prevention and treatment in less well-resourced regions',
+  799,
+  False],
+ ['MortarPestleUSA',
+  'Mortar & Pestle',
+  'Farm to mortar & pestle, our passion is handcrafting nourishment for the soul. Perfume & Apothecary Studio. https://t.co/U3pU2tC7OW https://t.co/LYBlGCbg1n',
+  24577,
+  False],
+ ['McKinsey_de',
+  'McKinsey Deutschland',
+  '@McKinsey & Company ist die in Deutschland und weltweit führende Topmanagement-Beratung. Hier finden Sie Informationen zu unseren Studien und Events.',
+  2438,
+  False],
+ ['CancerPOINTE',
+  'POINTE',
+  'Pediatric Oncology International Network for Training & Education. Helping healthcare professionals treat children with cancer in LMICs. POINTE is part of SIOP',
+  2130,
+  False],
+ ['LGCW2022',
+  'London Global Cancer Week',
+  'Highlighting the UK’s significant global contribution to strengthening capacity in cancer prevention and treatment in less well-resourced regions',
+  799,
+  False],
+ ['Scandion',
+  'Scandion Oncology',
+  'Scandion Oncology focus on novel and innovative drugs and biomarkers to combat anti-cancer drug resistance\n#scandion #SCOL #drugresistance',
+  821,
+  False],
+ ['SusannahStanwa1',
+  'Susannah Stanway',
+  'Medical oncologist; cancer control in LMICs; London Global Cancer Week. UK Global Cancer Network. All views my own.',
+  756,
+  False]]
+  
+Out[12]:
+
+Id	Screen_Name	Text	Created at
+0	1591168322183331870	EuropeanCancer	b'RT @EPHA_EU: Our member @FEANTSA will be pre...	2022-11-11 20:37:45+00:00
+1	1591135413447831552	SewantiLimaye	b'RT @LungConnectIN: #Music #therapy in #Cance...	2022-11-11 18:26:59+00:00
+2	1591121373480587264	ThatPhysioAbu	b'RT @LGCW2022: As part of #LondonGlobalCancer...	2022-11-11 17:31:11+00:00
+3	1591087430358425600	robertomanchon3	b'RT @LGCW2022: As part of #LondonGlobalCancer...	2022-11-11 15:16:19+00:00
+4	1591087129538355201	LGCW2022	b'As part of #LondonGlobalCancerWeek 2022, C3 ...	2022-11-11 15:15:07+00:00
+5	1591063940326641664	GlopesMd	b'RT @EuropeanCancer: Join @DeirdreCluneMEP, @...	2022-11-11 13:42:58+00:00
+6	1591061202863816705	EuropeanCancer	b'Join @DeirdreCluneMEP, @jeanyvesblay, @DrWen...	2022-11-11 13:32:05+00:00
+7	1591058719013752832	DanaFarber_CGCM	b"RT @LGCW2022: Global Focus on Cancer joins L...	2022-11-11 13:22:13+00:00
+8	1591038139845709824	LGCW2022	b"Global Focus on Cancer joins London Global C...	2022-11-11 12:00:27+00:00
+
+Out[14]:
+
+twitter_tweet_table_scrapedfile_to_db.csv
+
+Out[17]:
+
+
+
+You're connected to database:  ('users',)
+Creating table....
+Table is created....
+[0, 1591168322183331870, 'EuropeanCancer', "b'RT @EPHA_EU: Our member @FEANTSA will be present at this year #EuropeanCancerSummit.\\n\\n\\xf0\\x9f\\x93\\x85When? Save the date: 17 November, 13:00-13:45 CET\\n\\nR\\xe2\\x80\\xa6'", '2022-11-11 20:37:45+00:00']
+Record inserted
+[1, 1591135413447831552, 'SewantiLimaye', "b'RT @LungConnectIN: #Music #therapy in #Cancer #care\\n\\nDate &amp; Time: Friday, November 11th, 2022 @ 04:00 PM\\n\\nJoin Zoom Meeting\\nhttps://t.co/JV\\xe2\\x80\\xa6'", '2022-11-11 18:26:59+00:00']
+Record inserted
+[2, 1591121373480587264, 'ThatPhysioAbu', "b'RT @LGCW2022: As part of #LondonGlobalCancerWeek 2022, C3 are joined by Dr Juana Willumsen from WHO to discuss the benefits of Physical Act\\xe2\\x80\\xa6'", '2022-11-11 17:31:11+00:00']
+Record inserted
+[3, 1591087430358425600, 'robertomanchon3', "b'RT @LGCW2022: As part of #LondonGlobalCancerWeek 2022, C3 are joined by Dr Juana Willumsen from WHO to discuss the benefits of Physical Act\\xe2\\x80\\xa6'", '2022-11-11 15:16:19+00:00']
+Record inserted
+[4, 1591087129538355201, 'LGCW2022', "b'As part of #LondonGlobalCancerWeek 2022, C3 are joined by Dr Juana Willumsen from WHO to discuss the benefits of Ph\\xe2\\x80\\xa6 https://t.co/SOPeByWUGs'", '2022-11-11 15:15:07+00:00']
+Record inserted
+[5, 1591063940326641664, 'GlopesMd', "b'RT @EuropeanCancer: Join @DeirdreCluneMEP, @jeanyvesblay, @DrWengstrom, @JanvanderMeule6 &amp; many more at the #EuropeanCancerSummit\\xe2\\xa4\\xb5\\xef\\xb8\\x8f\\n\\n\\xf0\\x9f\\x92\\xacEmbed\\xe2\\x80\\xa6'", '2022-11-11 13:42:58+00:00']
+Record inserted
+[6, 1591061202863816705, 'EuropeanCancer', "b'Join @DeirdreCluneMEP, @jeanyvesblay, @DrWengstrom, @JanvanderMeule6 &amp; many more at the #EuropeanCancerSummit\\xe2\\xa4\\xb5\\xef\\xb8\\x8f\\n\\n\\xf0\\x9f\\x92\\xacE\\xe2\\x80\\xa6 https://t.co/RhAqikQnPG'", '2022-11-11 13:32:05+00:00']
+Record inserted
+[7, 1591058719013752832, 'DanaFarber_CGCM', 'b"RT @LGCW2022: Global Focus on Cancer joins London Global Cancer Week 2022 to present a live session on \'Supportive Care: an afterthought in\\xe2\\x80\\xa6"', '2022-11-11 13:22:13+00:00']
+Record inserted
+[8, 1591038139845709824, 'LGCW2022', 'b"Global Focus on Cancer joins London Global Cancer Week 2022 to present a live session on \'Supportive Care: an after\\xe2\\x80\\xa6 https://t.co/HiNvH3U9Pe"', '2022-11-11 12:00:27+00:00']
+Record inserted
+[9, 1591015095882379264, 'ThatPhysioAbu', 'b"RT @LGCW2022: Don\'t miss this LIVE event for London Global Cancer Week 2022 at The Royal Society of Medicine! Co-hosted by: Chatham House &amp;\\xe2\\x80\\xa6"', '2022-11-11 10:28:53+00:00']
+Record inserted
+[10, 1590999132600090624, 'gchantada', 'b"RT @LGCW2022: Don\'t miss this LIVE event for London Global Cancer Week 2022 at The Royal Society of Medicine! Co-hosted by: Chatham House &amp;\\xe2\\x80\\xa6"', '2022-11-11 09:25:27+00:00']
+Record inserted
+[11, 1590981419190276096, 'LGCW2022', 'b"Don\'t miss this LIVE event for London Global Cancer Week 2022 at The Royal Society of Medicine! Co-hosted by: Chath\\xe2\\x80\\xa6 https://t.co/4G8dsWr3l3"', '2022-11-11 08:15:03+00:00']
+Record inserted
+[12, 1590978938028888071, 'ABCGlobalAll', "b'Join the experts F. Cardoso, N. Harbeck, O. Pagani, S. Paluch-Shimon on 28 November 2022 at 18:00 CET to discuss  B\\xe2\\x80\\xa6 https://t.co/KGhmpQdLYF'", '2022-11-11 08:05:12+00:00']
+Record inserted
+[13, 1590961211537231872, 'marialcors', 'b"RT @LGCW2022: Don\'t miss this LIVE event for London Global Cancer Week 2022 at The Royal Society of Medicine! Co-hosted by: Chatham House &amp;\\xe2\\x80\\xa6"', '2022-11-11 06:54:46+00:00']
+Record inserted
+[14, 1590948451931795457, 'LungConnectIN', "b'#Music #therapy in #Cancer #care\\n\\nDate &amp; Time: Friday, November 11th, 2022 @ 04:00 PM\\n\\nJoin Zoom Meeting\\xe2\\x80\\xa6 https://t.co/I5kt79ZCaT'", '2022-11-11 06:04:03+00:00']
+Record inserted
+[15, 1590820726353063936, 'ThatPhysioAbu', 'b"RT @LGCW2022: Don\'t miss this LIVE event for London Global Cancer Week 2022 at The Royal Society of Medicine! Co-hosted by: Chatham House &amp;\\xe2\\x80\\xa6"', '2022-11-10 21:36:31+00:00']
+Record inserted
+[16, 1590811432685563905, 'SusannahStanwa1', 'b"RT @LGCW2022: Don\'t miss this LIVE event for London Global Cancer Week 2022 at The Royal Society of Medicine! Co-hosted by: Chatham House &amp;\\xe2\\x80\\xa6"', '2022-11-10 20:59:36+00:00']
+Record inserted
+[17, 1590811361743081473, 'SusannahStanwa1', "b'RT @LGCW2022: As part of #LondonGlobalCancerWeek 2022, C3 are joined by Dr Juana Willumsen from WHO to discuss the benefits of Physical Act\\xe2\\x80\\xa6'", '2022-11-10 20:59:19+00:00']
+Record inserted
+[18, 1590792307275890688, 'ThatPhysioAbu', "b'RT @LGCW2022: As part of #LondonGlobalCancerWeek 2022, C3 are joined by Dr Juana Willumsen from WHO to discuss the benefits of Physical Act\\xe2\\x80\\xa6'", '2022-11-10 19:43:36+00:00']
+Record inserted
+[19, 1590775640265228288, 'pii1240', 'b"RT @LGCW2022: Don\'t miss this LIVE event for London Global Cancer Week 2022 at The Royal Society of Medicine! Co-hosted by: Chatham House &amp;\\xe2\\x80\\xa6"', '2022-11-10 18:37:22+00:00']
+Record inserted
+[20, 1590757891199627265, 'PallChase', 'b"RT @LGCW2022: Don\'t miss this LIVE event for London Global Cancer Week 2022 at The Royal Society of Medicine! Co-hosted by: Chatham House &amp;\\xe2\\x80\\xa6"', '2022-11-10 17:26:50+00:00']
+Record inserted
+[21, 1590740496036483088, 'DorcasCancer', 'b"RT @LGCW2022: Don\'t miss this LIVE event for London Global Cancer Week 2022 at The Royal Society of Medicine! Co-hosted by: Chatham House &amp;\\xe2\\x80\\xa6"', '2022-11-10 16:17:43+00:00']
+Record inserted
+[22, 1590736143431106560, 'Alamandamal', 'b"This week\'s status from Alam wa Amal Program\\xe2\\x81\\xa3\\xe2\\x81\\xa3\\nWatch the live telecast on Sharjah TV on Friday @ 22:00\\xe2\\x81\\xa3\\xe2\\x81\\xa3\\n\\xe2\\x80\\x9cCharity b\\xe2\\x80\\xa6 https://t.co/XylaTRsCis"', '2022-11-10 16:00:25+00:00']
+Record inserted
+[23, 1590724731115823105, 'LGCW2022', "b'As part of #LondonGlobalCancerWeek 2022, C3 are joined by Dr Juana Willumsen from WHO to discuss the benefits of Ph\\xe2\\x80\\xa6 https://t.co/dC2yOfFTkh'", '2022-11-10 15:15:04+00:00']
+Record inserted
+[24, 1590701384822824962, 'MortarPestleUSA', 'b\'.#EPA Says #Cancer = "Trade Secret", "Proprietary Info" Belonging to Monsanto! Start at 25:00: https://t.co/xBrBLyhpqz\'', '2022-11-10 13:42:18+00:00']
+Record inserted
+[25, 1590691257432825856, 'McKinsey_de', 'b"RT @EuropeanCancer: #EuropeanCancerSummit\'s session \\xe2\\x9e\\xa1\\xef\\xb8\\x8f\'Bringing Digital Transformation of #Cancer Care to Fruition\'\\n\\xf0\\x9f\\x8e\\x99\\xef\\xb8\\x8fSpeakers include\\n\\xe2\\x9c\\x85@Fu\\xe2\\x80\\xa6"', '2022-11-10 13:02:04+00:00']
+Record inserted
+[26, 1590673806607388678, 'CancerPOINTE', 'b"RT @LGCW2022: Don\'t miss this LIVE event for London Global Cancer Week 2022 at The Royal Society of Medicine! Co-hosted by: Chatham House &amp;\\xe2\\x80\\xa6"', '2022-11-10 11:52:43+00:00']
+Record inserted
+[27, 1590619061888569345, 'LGCW2022', 'b"Don\'t miss this LIVE event for London Global Cancer Week 2022 at The Royal Society of Medicine! Co-hosted by: Chath\\xe2\\x80\\xa6 https://t.co/KSEKAHxy0L"', '2022-11-10 08:15:11+00:00']
+Record inserted
+[28, 1590609062248722432, 'Scandion', "b'Our Q3 2022 interim report will be published on November 16 with Executive Management hosting a webcast and confere\\xe2\\x80\\xa6 https://t.co/ev9TkD55n1'", '2022-11-10 07:35:27+00:00']
+Record inserted
+[29, 1590602159657140224, 'SusannahStanwa1', "b'RT @LGCW2022: As part of #LondonGlobalCancerWeek 2022, C3 are joined by Dr Juana Willumsen from WHO to discuss the benefits of Physical Act\\xe2\\x80\\xa6'", '2022-11-10 07:08:01+00:00']
+Record inserted.......
+
+
+#Tweets Posted by User
+Out[19]:
+
+text
+0	b'RT @EPHA_EU: Our member @FEANTSA will be pre...
+1	b'Join @DeirdreCluneMEP, @jeanyvesblay, @DrWen...
+
+# Time at which user posted the tweet
+Out[20]:
+created_at
+0	2022-11-11 10:15:07
+1	2022-11-11 07:00:27
+2	2022-11-11 03:15:03
+3	2022-11-10 10:15:04
+4	2022-11-10 03:15:11
+
+# Count number of tweets
+Out[21]: 
+	COUNT(text)
+0	5
+
+
+Out[22]:
+sr_no	id	screen_name	text	created_at
+0	0	1591168322183331870	EuropeanCancer	b'RT @EPHA_EU: Our member @FEANTSA will be pre...	2022-11-11 15:37:45
+1	1	1591135413447831552	SewantiLimaye	b'RT @LungConnectIN: #Music #therapy in #Cance...	2022-11-11 13:26:59
+2	2	1591121373480587264	ThatPhysioAbu	b'RT @LGCW2022: As part of #LondonGlobalCancer...	2022-11-11 12:31:11
+3	3	1591087430358425600	robertomanchon3	b'RT @LGCW2022: As part of #LondonGlobalCancer...	2022-11-11 10:16:19
+4	4	1591087129538355201	LGCW2022	b'As part of #LondonGlobalCancerWeek 2022, C3 ...	2022-11-11 10:15:07
+5	5	1591063940326641664	GlopesMd	b'RT @EuropeanCancer: Join @DeirdreCluneMEP, @...	2022-11-11 08:42:58
+6	6	1591061202863816705	EuropeanCancer	b'Join @DeirdreCluneMEP, @jeanyvesblay, @DrWen...	2022-11-11 08:32:05
+7	7	1591058719013752832	DanaFarber_CGCM	b"RT @LGCW2022: Global Focus on Cancer joins L...	2022-11-11 08:22:13
+8	8	1591038139845709824	LGCW2022	b"Global Focus on Cancer joins London Global C...	2022-11-11 07:00:27
+9	9	1591015095882379264	ThatPhysioAbu	b"RT @LGCW2022: Don't miss this LIVE event for...	2022-11-11 05:28:53
+10	10	1590999132600090624	gchantada	b"RT @LGCW2022: Don't miss this LIVE event for...	2022-11-11 04:25:27
+11	11	1590981419190276096	LGCW2022	b"Don't miss this LIVE event for London Global...	2022-11-11 03:15:03
+12	12	1590978938028888071	ABCGlobalAll	b'Join the experts F. Cardoso, N. Harbeck, O. ...	2022-11-11 03:05:12
+13	13	1590961211537231872	marialcors	b"RT @LGCW2022: Don't miss this LIVE event for...	2022-11-11 01:54:46
+14	14	1590948451931795457	LungConnectIN	b'#Music #therapy in #Cancer #care\n\nDate &am...	2022-11-11 01:04:03
+15	15	1590820726353063936	ThatPhysioAbu	b"RT @LGCW2022: Don't miss this LIVE event for...	2022-11-10 16:36:31
+16	18	1590792307275890688	ThatPhysioAbu	b'RT @LGCW2022: As part of #LondonGlobalCancer...	2022-11-10 14:43:36
+17	19	1590775640265228288	pii1240	b"RT @LGCW2022: Don't miss this LIVE event for...	2022-11-10 13:37:22
+18	20	1590757891199627265	PallChase	b"RT @LGCW2022: Don't miss this LIVE event for...	2022-11-10 12:26:50
+19	21	1590740496036483088	DorcasCancer	b"RT @LGCW2022: Don't miss this LIVE event for...	2022-11-10 11:17:43
+20	22	1590736143431106560	Alamandamal	b"This week's status from Alam wa Amal Program...	2022-11-10 11:00:25
+21	23	1590724731115823105	LGCW2022	b'As part of #LondonGlobalCancerWeek 2022, C3 ...	2022-11-10 10:15:04
+22	24	1590701384822824962	MortarPestleUSA	b'.#EPA Says #Cancer = "Trade Secret", "Propri...	2022-11-10 08:42:18
+23	25	1590691257432825856	McKinsey_de	b"RT @EuropeanCancer: #EuropeanCancerSummit's ...	2022-11-10 08:02:04
+24	26	1590673806607388678	CancerPOINTE	b"RT @LGCW2022: Don't miss this LIVE event for...	2022-11-10 06:52:43
+25	27	1590619061888569345	LGCW2022	b"Don't miss this LIVE event for London Global...	2022-11-10 03:15:11
+26	28	1590609062248722432	Scandion	b'Our Q3 2022 interim report will be published...	2022-11-10 02:35:27
+
+

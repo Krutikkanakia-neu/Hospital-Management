@@ -1,0 +1,239 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# # Extracting Textual Information From Twitter
+# 
+
+# ## Introduction
+# 
+# Here we are using twitter API to extract tweets related with brands of our interest. Every tweet is then passed through google's sentimental analysis API and tweet is classified into positive, negative or neutral. All this information is then collected and visualized in tableau (data visualization tool). 
+
+# ## Importing Essential Libraries
+
+# In[1]:
+
+
+import tweepy #Library required for Twitter API
+import csv, re
+import pandas as pd
+import os
+import wget
+import logging
+
+
+# ### Authentication keys
+# 
+# Here we are defining keys to authenticate with twitter API and start calling API functions to extract tweets for our analysis.   
+# 
+# You need to register for a Twitter dev account https://developer.twitter.com     
+# 
+# Look at the Twitter data model https://developer.twitter.com/en/docs/twitter-api/v1/data-dictionary/object-model/tweet
+# 
+# Apply for a Twitter Developer Account
+# 
+# Go to the Twitter developer site to apply for a developer account.
+# 
+# Step 2: Create an Application
+# 
+# Twitter grants authentication credentials to apps, not accounts. An app can be any tool or bot that uses the Twitter API. So you need to register your an app to be able to make API calls.
+# 
+# To register your app, go to your Twitter apps page and select the Create an app option.
+# 
+# You need to provide the following information about your app and its purpose:
+# 
+# App name: a name to identify your application (such as examplebot)
+# Application description: the purpose of your application (such as An example bot for a Real Python article)
+# Your or your application’s website URL: required, but can be your personal site’s URL since bots don’t need a URL to work
+# Use of the app: how users will use your app (such as This app is a bot that will automatically respond to users)
+# Step 3: Create the Authentication Credentials
+# 
+# To create the authentication credentials, go to your Twitter apps page. Here’s what the Apps page looks like:
+# 
+# Edit app details
+# Here you’ll find the Details button of your app. Clicking this button takes you to the next page, where you can generate the credentials.
+# 
+# By selecting the Keys and tokens tab, you can generate and copy the key, token, and secrets to use them in your code:
+# 
+# Generate keys and tokens
+# After generating the credentials, save them to later use them in your code.
+# 
+# 
+# 
+# 
+
+# In[2]:
+
+
+consumer_key = "4VZJKYEe7UDQs1U4uBI9cpWL2"
+consumer_secret = "xOcX7LjrsI7MznQI3oJ3hGqzAz3i7tqMF7p5TJQJcQ1R2zdUJG"
+access_key = "798579378141573120-e4ZLKA218nUlBmcyOR8qlOeF64QNnjt"
+access_secret = "8ogJF1P3hRpkXDiOHBLYaeHqfEwVTkoe4JLPg0heSpPLu"
+
+#In[3]:
+
+tweets = pd.DataFrame(columns=["Id","Screen_Name","Text","Created at"])
+
+#In[4]:
+tweets.columns
+
+# ### Extracting Tweets
+# 
+# We are using tweepy.cursor method to get all the tweets hashtagged with 'hospital'
+
+# In[5]:
+
+
+import datetime, time
+last_week = datetime.date.today() - datetime.timedelta(9)
+since_tweets = datetime.datetime.strptime(time.strftime("%Y-%m-%d"), "%Y-%m-%d")
+print (since_tweets)
+
+
+# As we have previously seen, the Twitter API requires that all requests use OAuth to authenticate. So you need to create the required authentication credentials to be able to use the API. These credentials are four text strings:
+# 
+# Consumer key
+# Consumer secret
+# Access token
+# Access secret
+
+# In[6]:
+
+
+auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
+auth.set_access_token(access_key, access_secret)
+api = tweepy.API(auth,wait_on_rate_limit=True)
+
+try:
+    api.verify_credentials()
+    print("Authentication OK")
+except:
+    print("Error during authentication")
+
+#In[7]:
+
+import datetime, time
+now = datetime.date.today()
+date_since = datetime.datetime.strptime(time.strftime("%Y-%m-%d"), "%Y-%m-%d")
+print (date_since)
+keywords=['hospital', 'doctor']
+print (' '.join(keywords))
+num_tweets=30
+print ("num_tweets ", num_tweets)
+
+#In[8]:
+
+# https://developer.twitter.com/en/docs/twitter-api/v1/tweets/search/api-reference/get-search-tweets
+# https://docs.tweepy.org/en/stable/api.html#search-tweet
+
+tweets = tweepy.Cursor(api.search_tweets,
+              q="#cancer",
+              lang="en",
+              until=date_since).items(num_tweets)
+              
+#In[9]:
+
+tweets
+
+#In[10]:
+
+cnt=0
+tweets_data = [] #initialize master list to hold our ready tweets
+for tweet in tweets:
+    print(cnt)    
+    print(tweet)
+    cnt=cnt+1
+    
+#In[11]:
+
+tweets_data
+
+#In[12]:
+
+tweets_df = pd.DataFrame(tweets_data,columns =["Id","Screen_Name","Text","Created at"] )
+tweets_df
+
+#In[13]:
+
+tweets_df.head()
+
+#In[14]:
+
+outfile=re.sub(r"\s+", '_', "twitter_tweet_table_scrapedfile_to_db")
+outfile=outfile+'.csv'
+print(outfile)
+tweets_df.to_csv(outfile, sep=',', encoding='utf-8')
+
+#In[15]:
+
+import mysql.connector as msql
+from mysql.connector import Error
+try:
+    conn = msql.connect(host='localhost', user='root',  
+                        password='root123456')#give ur username, password
+    if conn.is_connected():
+        cursor = conn.cursor()
+        cursor.execute("CREATE DATABASE Users")
+        print("Database is created")
+except Error as e:
+    print("Error while connecting to MySQL", e
+    
+
+#In[16]:
+
+import pandas as pd
+tweetsdata = pd.read_csv(r"C:\Users\Admin\Desktop\krutik(python)\DMDD\twitter_tweet_table_scrapedfile_to_db.csv", index_col=False, delimiter = ',')
+tweetsdata.head()
+
+#In[17]:
+
+import mysql.connector as mysql
+from mysql.connector import Error
+try:
+    conn = mysql.connect(host='localhost', database='Users', user='root', password='root123456')
+    if conn.is_connected():
+        cursor = conn.cursor()
+        cursor.execute("select database();")
+        record = cursor.fetchone()
+        print("You're connected to database: ", record)
+        cursor.execute('DROP TABLE IF EXISTS tweets;')
+        print('Creating table....')
+# in the below line please pass the create table statement which you want #to create
+        cursor.execute("CREATE TABLE tweets(sr_no int,id varchar(255),screen_name varchar(255),text varchar(255),created_at datetime)")
+        print("Table is created....")
+        #loop through the data frame
+        for i,row in tweetsdata.iterrows():
+            #here %S means string values 
+            sql = "INSERT INTO Users.tweets VALUES (%s,%s,%s,%s,%s)"
+            row = replace_empty_string(row)
+            print(row)
+            cursor.execute(sql, tuple(row))
+            print("Record inserted")
+            # the connection is not auto committed by default, so we must commit to save our changes
+            conn.commit()
+except Error as e:
+            print("Error while connecting to MySQL", e)
+
+#In[18]:
+
+def run_query(query):
+    return pd.read_sql(query,conn)
+    
+#In[19]:
+
+# What Tweet the User Posted?
+run_query('Select text from tweets where screen_name="EuropeanCancer"')
+
+#In[20]:
+
+#What time the user posted this tweet?
+run_query('Select created_at from tweets where screen_name="LGCW2022"')
+
+#In[21]:
+
+# count the number of tweets posted by user
+run_query('Select COUNT(text) From tweets where screen_name ="LGCW2022"')
+
+#In[22]:
+
+# Display table by eliminating a screen_name
+run_query('Select * from tweets Where NOT screen_name="SusannahStanwa1"')

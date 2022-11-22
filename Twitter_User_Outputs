@@ -1,0 +1,318 @@
+# column names are printed
+
+Out[4]: Index(['Screen_Name', 'Name', 'description', 'followers', 'following'], dtype='object')
+
+# execution date is printed
+
+Out[5]:2022-11-12 00:00:00
+
+# Authetication is Checked
+    
+Out[6]:Authentication OK
+
+# Recent tweet is printed
+Out[7]: Most recent tweet: A sudden drop in temperature may also bring along seasonal ailments. Here are some essential health tips to keep yo… https://t.co/VCH3iNGhMt
+
+# print all details 
+Out[8]: User details:
+Kokilaben Hospital, Mumbai
+Official Kokilaben Hospital, Mumbai account. Follow us for the latest in health news and tips. We ❤️ reading your tweets and reply to them between 0900-1800IST
+Mumbai
+Last 20 Followers:
+Kavindra Mistry
+Navneet Wadhwani
+Sohail Shaikh
+Goldi mishra
+Md Yousuf
+sheetalkanakia
+Vanam Eco LLP
+Tanuja Karande
+विवेक माधवी मुकुन्द म्हस्कर🇮🇳
+AJGS TRUST
+SARAVANAN DHAYANANTHAN PILLAI
+Rza
+AJIT SOHI
+Riteshkumarbehera
+Nilam Navale
+KISHOR MALVIYA
+manish mallick
+Piku Singh
+Abhishek Shyam
+Dinkar Rawat - D.R
+
+# print date, joined keywords and number of tweets we want  to print
+Out[9]: 2022-11-12 00:00:00
+hospital doctor
+num_tweets  30
+
+# print tweet from tweets 
+Out[11]:0
+Status(_api=<tweepy.api.API object at 0x0000024758E89240>, _json={'created_at': 'Fri Nov 11 20:37:45 +0000 2022', 'id': 1591168322183331870, 'id_str': '1591168322183331870', 'text': 'RT @EPHA_EU: Our member @FEANTSA will be present at this year #EuropeanCancerSummit.\n\n📅When? Save the date: 17 November, 13:00-13:45 CET\n\nR…', 'truncated': False, 'entities': {'hashtags': [{'text': 'EuropeanCancerSummit', 'indices': [62, 83]}], 'symbols': [], 'user_mentions': [{'screen_name': 'EPHA_EU', 'name': 'EPHA', 'id': 184756856, 'id_str': '184756856', 'indices': [3, 11]}, {'screen_name': 'FEANTSA', 'name': 'FEANTSA', 'id': 262178953, 'id_str': '262178953', 'indices': [24, 32]}], 'urls': []}, 'metadata': {'iso_language_code': 'en', 'result_type': 'recent'}, 'source': '<a href="http://twitter.com/download/android" rel="nofollow">Twitter for Android</a>', 'in_reply_to_status_id': None, 'in_reply_to_status_id_str': None, 'in_reply_to_user_id': None, 'in_reply_to_user_id_str': None, 'in_reply_to_screen_name': None.........
+
+
+Out[13]: <tweepy.cursor.ItemIterator at 0x24759a2c640>
+
+#print counts
+Out[14]:0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+
+#print tweets data
+Out[15]:[['EuropeanCancer',
+  'European Cancer Organisation',
+  'Raising awareness to improve prevention, diagnosis, treatment and care of cancer patients. Organiser of #EuropeanCancerSummit',
+  19770,
+  False],
+ ['SewantiLimaye',
+  'Sewanti Limaye 🇮🇳🇺🇸',
+  'Director Medical&Precision Oncology #precisiononcology #liquidbx #hnc #LCSM @DanaFarber @ColumbiaMed @JIPOEditors @IylonOncology @rfhospital #IMPACTIndia',
+  1797,
+  False],
+ ['ThatPhysioAbu',
+  'Abu Sidhanee',
+  "Specialist Children's Physiotherapist \nPart of the Paediatrics & TCT service @UCLH | @CCLG | @WorldSIOP | @CancerPOINTE | @IPTHOPE 🎗️",
+  938,
+  False],
+ ['robertomanchon3', 'roberto manchon', '', 29, False],
+ ['LGCW2022',
+  'London Global Cancer Week',
+  'Highlighting the UK’s significant global contribution to strengthening capacity in cancer prevention and treatment in less well-resourced regions',
+  799,
+  False],
+ ['GlopesMd',
+  'gilberto lopes',
+  'Chief MedOnc @SylvesterCancer. Helping improve Cancer Control in LMICs. Editor-in-Chief @JCOGO_ASCO, Board Member @UICC - co-chair #ATOMcoalition',
+  37627,
+  False],
+ ['EuropeanCancer',
+  'European Cancer Organisation',
+  'Raising awareness to improve prevention, diagnosis, treatment and care of cancer patients. Organiser of #EuropeanCancerSummit',
+  19770,
+  False],
+ ['DanaFarber_CGCM',
+  'Dana-Farber Center for Global Cancer Medicine',
+  'The Center for Global Cancer Medicine (CGCM) strives to reduce the global cancer burden and promote health equity in resource-limited settings. #GlobalOncology',
+  393,
+  False],
+ ['LGCW2022',
+  'London Global Cancer Week',
+  'Highlighting the UK’s significant global contribution to strengthening capacity in cancer prevention and treatment in less well-resourced regions',
+  799,
+  False],
+ ['ThatPhysioAbu',
+  'Abu Sidhanee',
+  "Specialist Children's Physiotherapist \nPart of the Paediatrics & TCT service @UCLH | @CCLG | @WorldSIOP | @CancerPOINTE | @IPTHOPE 🎗️",
+  938,
+  False],
+ ['gchantada', 'Guillermo Chantada', 'Pediatric Oncologist', 1154, False],
+ ['LGCW2022',
+  'London Global Cancer Week',
+  'Highlighting the UK’s significant global contribution to strengthening capacity in cancer prevention and treatment in less well-resourced regions',
+  799,
+  False],
+ ['ABCGlobalAll',
+  'ABC Global Alliance',
+  'Improving and extending the lives of women and men living with advanced breast cancer (ABC) in all countries worldwide and fighting for a cure.',
+  1005,
+  False],
+ ['marialcors',
+  'Angela Lopez-Cortes',
+  '🇨🇴 living in 🇬🇧 • MD Epidemiology Public Health Global Health & Development • Research Fellow @Benchista @UCLchildhealth • Clinical trials @greatormondSt',
+  49,
+  False],
+ ['LungConnectIN',
+  'Lung Connect India',
+  'Lung Connect is a community for patients and caregivers of Lung Cancer.',
+  152,
+  False],
+ ['ThatPhysioAbu',
+  'Abu Sidhanee',
+  "Specialist Children's Physiotherapist \nPart of the Paediatrics & TCT service @UCLH | @CCLG | @WorldSIOP | @CancerPOINTE | @IPTHOPE 🎗️",
+  938,
+  False],
+ ['SusannahStanwa1',
+  'Susannah Stanway',
+  'Medical oncologist; cancer control in LMICs; London Global Cancer Week. UK Global Cancer Network. All views my own.',
+  756,
+  False],
+ ['SusannahStanwa1',
+  'Susannah Stanway',
+  'Medical oncologist; cancer control in LMICs; London Global Cancer Week. UK Global Cancer Network. All views my own.',
+  756,
+  False],
+ ['ThatPhysioAbu',
+  'Abu Sidhanee',
+  "Specialist Children's Physiotherapist \nPart of the Paediatrics & TCT service @UCLH | @CCLG | @WorldSIOP | @CancerPOINTE | @IPTHOPE 🎗️",
+  938,
+  False],
+ ['pii1240',
+  'Pia, childhood cancer PT',
+  'Kinesióloga, nerd, deportista, lesionada, wataca, #Englishlover',
+  790,
+  False],
+ ['PallChase',
+  'Palliative Care in Humanitarian Aid Situations',
+  'We believe in the humanity of each person and work together with those affected by humanitarian settings have the palliative care they need and deserve',
+  269,
+  False],
+ ['DorcasCancer',
+  'The Dorcas Cancer Foundation',
+  'Non-profit organization dedicated to improving childhood cancer outcomes in Nigeria.',
+  1131,
+  False],
+ ['Alamandamal',
+  'برنامج ألم وأمل',
+  '\u200f\u200fبرنامج ألم وأمل كل يوم جمعة الساعة 10 مساء على إذاعة وتلفزيون الشارقة WhatsApp 0501637000 -الم وامل',
+  5133,
+  False],
+ ['LGCW2022',
+  'London Global Cancer Week',
+  'Highlighting the UK’s significant global contribution to strengthening capacity in cancer prevention and treatment in less well-resourced regions',
+  799,
+  False],
+ ['MortarPestleUSA',
+  'Mortar & Pestle',
+  'Farm to mortar & pestle, our passion is handcrafting nourishment for the soul. Perfume & Apothecary Studio. https://t.co/U3pU2tC7OW https://t.co/LYBlGCbg1n',
+  24577,
+  False],
+ ['McKinsey_de',
+  'McKinsey Deutschland',
+  '@McKinsey & Company ist die in Deutschland und weltweit führende Topmanagement-Beratung. Hier finden Sie Informationen zu unseren Studien und Events.',
+  2438,
+  False],
+ ['CancerPOINTE',
+  'POINTE',
+  'Pediatric Oncology International Network for Training & Education. Helping healthcare professionals treat children with cancer in LMICs. POINTE is part of SIOP',
+  2130,
+  False],
+ ['LGCW2022',
+  'London Global Cancer Week',
+  'Highlighting the UK’s significant global contribution to strengthening capacity in cancer prevention and treatment in less well-resourced regions',
+  799,
+  False],
+ ['Scandion',
+  'Scandion Oncology',
+  'Scandion Oncology focus on novel and innovative drugs and biomarkers to combat anti-cancer drug resistance\n#scandion #SCOL #drugresistance',
+  821,
+  False],
+ ['SusannahStanwa1',
+  'Susannah Stanway',
+  'Medical oncologist; cancer control in LMICs; London Global Cancer Week. UK Global Cancer Network. All views my own.',
+  756,
+  False]]
+  
+# print the data in table form
+Out[16]: Screen_Name	Name	description	followers	following
+0	EuropeanCancer	European Cancer Organisation	Raising awareness to improve prevention, diagn...	19770	False
+1	SewantiLimaye	Sewanti Limaye 🇮🇳🇺🇸	Director Medical&Precision Oncology #precision...	1797	False
+2	ThatPhysioAbu	Abu Sidhanee	Specialist Children's Physiotherapist \nPart o...	938	False
+3	robertomanchon3	roberto manchon		29	False
+4	LGCW2022	London Global Cancer Week	Highlighting the UK’s significant global contr...	799	False
+5	GlopesMd	gilberto lopes	Chief MedOnc @SylvesterCancer. Helping improve...	37627	False
+6	EuropeanCancer	European Cancer Organisation	Raising awareness to improve prevention, diagn...	19770	False
+7	DanaFarber_CGCM	Dana-Farber Center for Global Cancer Medicine	The Center for Global Cancer Medicine (CGCM) s...	393	False
+8	LGCW2022	London Global Cancer Week	Highlighting the UK’s significant global contr...	799	False
+9	ThatPhysioAbu	Abu Sidhanee	Specialist Children's Physiotherapist \nPart o...	938	False
+
+# data converted to CSV file
+Out[18]:twitter_user_table_scrapedfile_to_db.csv
+
+#Connected to sql and created the DB
+Out[19]: Database is created
+
+#Connects to database and inserts the records
+Out[21]: You're connected to database:  ('users',)
+Creating table....
+Table is created....
+Record inserted
+Record inserted
+Record inserted
+Record inserted
+Record inserted
+Record inserted.....
+
+#prints the followers of a user
+Out[24]:
+followers
+0	1797
+
+#Prints the number of following by user
+Out[25]:
+   following
+0	0
+1	0
+2	0
+3	0
+
+#Joins two tables
+Out[26]:
+followers	id
+0	19770	1591168322183331870
+1	19770	1591168322183331870
+2	1797	1591135413447831552
+3	938	1591121373480587264
+4	938	1591121373480587264
+...	...	...
+65	799	1590619061888569345
+66	821	1590609062248722432
+67	756	1590602159657140224
+68	756	1590602159657140224
+69	756	1590602159657140224
+70 rows × 2 columns
+
+#Prints one value of screen_name
+out[27]:
+screen_name
+0	EuropeanCancer
+1	SewantiLimaye
+2	ThatPhysioAbu
+3	robertomanchon3
+4	LGCW2022
+5	GlopesMd
+6	DanaFarber_CGCM
+7	gchantada
+8	ABCGlobalAll
+9	marialcors
+10	LungConnectIN
+11	SusannahStanwa1
+12	pii1240
+13	PallChase
+14	DorcasCancer
+15	Alamandamal
+16	MortarPestleUSA
+17	McKinsey_de
+18	CancerPOINTE
+19	Scandion
+
+
+
+
+
+
