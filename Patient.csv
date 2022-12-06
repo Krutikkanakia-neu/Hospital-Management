@@ -1,0 +1,29 @@
+P_ID,F_name,L_name,Age,Gender,Phone,Email,B_Grp,Address,State,City,Admit_Date,Discharge_Date
+1,Chris,Brown,56,M,8578452154,cb@gmail.com,A+,"56, Washington Street",MA,Boston,11/10/2021,11/25/2021
+2,Nick,Jonas,45,M,8756984125,nj@gmail.com,B-,"45, Lambert Street",TX,Dallas,10/20/2021,11/15/2021
+3,Nikki ,Brook,67,F,8796521453,nb@gmail.com,O+,"15, Huntington Ave",FL,Tampa,1/7/2022,1/10/2022
+4,Robert,Costa,79,M,8763214589,rc@gmail.com,A-,"25, Breaking Rocks",MA,Lowell,2/6/2022,2/12/2022
+5,Kelly,Mcardle,35,F,8796542314,km@gmail.com,A+,"88, Center Street",MA,Boston,3/15/2022,3/20/2022
+6,James,Johnson,46,M,8578963254,jj@gmail.com,B+,"726, Brighton Ave",NY,Rochester,11/7/2021,11/15/2021
+7,William,Smith,,M,7856452125,ws@hotmail.com,O-,"63, Braintree",NV,Las Vegas,9/11/2021,10/5/2021
+8,Robert,Johnson,58,M,7576548932,rj@outlook.com,AB+,"78, Tremont Street",WA,Seattle,5/8/2022,1/10/2022
+9,John,Smith,63,M,8563254785,js@ymail.com,AB-,"454, Parker Ave",IL,Chicago,2/9/2022,3/12/2022
+10,Maria ,Gracia,64,F,7898546536,mg@gmail.com,A+,"123, Centre Street",CA,Los Angeles,6/4/2022,6/20/2022
+11,Mary,Smith,87,F,8547896523,ms@outlook.com,,"487, Park Drive",MI,Jackson,1/10/2021,1/25/2021
+12,Maria ,Rodriguez,42,F,9856321475,mr@ymail.com,O+,"59, Alphonso Street",MA,Worcester,6/22/2021,7/5/2021
+13,Michael ,Smith,,M,7978569854,ms@ymail.com,A-,"28, Price Ave",CT,Greenwich,1/3/2022,1/5/2022
+14,Maria ,Martinez,37,F,8547879856,mm@gmail.com,,"82, Parker Street",NY,Norwich,3/7/2022,3/12/2022
+15,Laura,Fernandez,34,F,7978548632,lr@hotmail.com,B+,"96, Cedar Street",NV,Virginia City,3/11/2022,3/20/2022
+16,Tomas,Hughes,78,M,8659745878,th@outlook.com,O-,"28, Huntington Ave",MA,Boston,7/5/2021,11/25/2021
+17,Andrew,Symonds,72,M,7015462589,as@gmail.com,AB+,"66, Fenway Park",TX,Houston,3/17/2021,8/15/2021
+18,Joe,Root,54,M,8578632514,as@gmail.com,AB-,"18, Cedar Street",FL,Miami,1/7/2022,1/10/2022
+19,Cristiano,Ronaldo,59,M,7475856963,cr@hotmail.com,,"56, Tremont Street",IL,Chicago,2/6/2022,2/12/2022
+20,Lionel,Messi,,M,8489587456,lm@gmail.com,B-,"252, Huntington Ave",CA,San Francisco,3/15/2022,3/20/2022
+21,Dwayne,Johnson,48,M,7896587451,dj@outlook.com,O+,"79, Park Drive",NV,Henderson,11/10/2021,11/25/2021
+22,Peter,Paul,41,M,9896547551,pp@yahoo.in,A+,"46, Alphonso Street",NH,Concord,11/10/2021,11/15/2021
+23,Ben,Stokes,65,M,8965478521,bs@outlook.com,B-,"75, Centre Street",TX,Austin,10/20/2021,11/10/2022
+24,Yale,Gadner,35,F,8954785632,yg@gmail.com,O+,"890, Parker Street",FL,Orlando,1/7/2022,1/25/2022
+25,Gerson,Brown,66,F,8745698542,gb@ymail.com,A-,"630, Brookline Ave",MA,Salem,2/6/2022,2/15/2022
+26,David ,Miller,77,M,8954125698,dm@hotmail.com,A+,"575, Cedar Street",IL,Naperville,3/15/2022,4/10/2022
+27,Binet,Rodriguez,85,F,9658741235,br@gmail.com,B+,"420, Dudley Street",MI,Oxford,11/10/2021,12/12/2021
+28,Mike,Smith,89,M,7879654125,ms@outlook.com,A+,"85, Lambert Street",WA,Vancouver,10/20/2021,11/20/2021
